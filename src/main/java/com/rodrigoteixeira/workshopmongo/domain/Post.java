@@ -1,5 +1,6 @@
 package com.rodrigoteixeira.workshopmongo.domain;
 
+import com.rodrigoteixeira.workshopmongo.dto.AuthorDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +25,7 @@ public class Post implements Serializable {
     private Date date;
     private String title;
     private String body;
-    private User author;
+    private AuthorDto author;
 
     @Override
     public boolean equals(Object o) {
