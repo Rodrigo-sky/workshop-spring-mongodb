@@ -3,6 +3,7 @@ package com.rodrigoteixeira.workshopmongo.services;
 import com.rodrigoteixeira.workshopmongo.domain.User;
 import com.rodrigoteixeira.workshopmongo.dto.UserDto;
 import com.rodrigoteixeira.workshopmongo.exception.ObjectNotFoundException;
+import com.rodrigoteixeira.workshopmongo.repository.PostRepository;
 import com.rodrigoteixeira.workshopmongo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,8 @@ public class UserService {
 
     @Autowired
     private UserRepository repository;
+    @Autowired
+    private PostRepository postRepository;
 
     public List<User> findAll() {
         return repository.findAll();
